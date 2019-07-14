@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyProfile">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/profile_image_desc"
+        app:layout_constraintBottom_toTopOf="@+id/name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/my_image" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        android:text="@string/my_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toTopOf="@+id/line_view"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:id="@+id/other_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_view">
+
+
+        <RelativeLayout
+            android:id="@+id/track_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/track"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/track_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/track"
+                android:text="@string/track_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/country_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/country"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/country_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/country"
+                android:text="@string/country_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/email_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/email_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/email"
+                android:text="@string/email_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/phone_number_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/phone_number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/phone_number_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/phone_number"
+                android:text="@string/phone_number_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/username_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/slack_username"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/username_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/username"
+                android:text="@string/slack_username_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/line_view">
+
+
+        <RelativeLayout
+            android:id="@+id/edit_track_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            >
+
+            <TextView
+                android:id="@+id/edit_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/track"
+                android:layout_alignBaseline="@id/edit_track_field"
+                android:layout_alignBottom="@id/edit_track_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/edit_track_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/edit_track"
+                android:text="@string/track_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_edit_country_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            >
+
+            <TextView
+                android:id="@+id/edit_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/country"
+                android:layout_alignBaseline="@id/edit_country_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/edit_country_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/edit_country"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:text="@string/country_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_email_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            >
+
+            <TextView
+                android:id="@+id/edit_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/email"
+                android:layout_alignBaseline="@id/edit_email_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/edit_email_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/edit_email"
+                android:text="@string/email_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_phone_number_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            >
+
+            <TextView
+                android:id="@+id/edit_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/phone_number"
+                android:layout_alignBaseline="@id/edit_phone_number_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/edit_phone_number_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/edit_phone_number"
+                android:text="@string/phone_number_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_username_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            >
+
+            <TextView
+                android:id="@+id/edit_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/slack_username"
+                android:layout_alignBaseline="@id/edit_username_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/edit_username_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/edit_username"
+                android:text="@string/slack_username_field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
